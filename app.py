@@ -2,6 +2,7 @@
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from numpy import e
+import os
 import streamlit as st
 from langchain_community.vectorstores import FAISS
 from langchain.chains.retrieval import create_retrieval_chain
@@ -13,6 +14,9 @@ from scripts.document_loader import load_document
 #from gemini import generate_embeddings, generate_llm
 from langchain_deepseek import ChatDeepSeek
 from mydeepseek import deep_embeddings, deep_llm
+
+
+os.environ['DEEPSEEK_API_KEY'] = st.secrets['DEEPSEEK_API_KEY']
 
 
 def load_document(pdf):
