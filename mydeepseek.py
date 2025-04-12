@@ -31,10 +31,12 @@ def deep_embeddings(chunks):
 
 
 def deep_llm():
+    os.environ['DEEPSEEK_API_KEY'] = st.secrets['DEEPSEEK_API_KEY']
+    key=os.environ['DEEPSEEK_API_KEY']
     print("dfrvbghnmjk")
     llm = ChatDeepSeek(
     model="deepseek-chat",
     base_url="https://api.deepseek.com/v1",
     temperature=0,
-    api_key=DEEPSEEK_API_KEY)
+    api_key=key)
     return llm
