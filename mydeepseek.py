@@ -8,7 +8,6 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_deepseek import ChatDeepSeek
 #from langchain_community.embeddings import OllamaEmbeddings
 from langchain_huggingface.embeddings import HuggingFaceEmbeddings
-from API import DEEPSEEK_API_KEY
 
 def deep_embeddings(chunks):
     print("ksjbagncfkshfgkg")
